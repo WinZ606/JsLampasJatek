@@ -10,8 +10,7 @@ export default class JatekTer{
     }
 
     #megjelenit() {
-        console.log("megjelenit")
-        console.log(this.#lista)
+        this.szuloElem.innerHTML = "";
         for (let index = 0; index < this.#lista.length; index++) {
             new Lampa(this.#lista[index], index, this.szuloElem);
         }

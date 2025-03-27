@@ -6,7 +6,6 @@ export default class Lampa{
       this.#lampaIndex = index;
       this.szuloElem = szuloElem;
       this.megjelenit();
-      console.log(this.#allapot)
       this.lampaElem = document.querySelector(".el:last-child")
       this.lampaElem.addEventListener("click", ()=> {
         const esemeny = new CustomEvent("kivalaszt", {detail: this.#lampaIndex})
