@@ -6,7 +6,7 @@ export default class Info{
     }
 
     #megjelenit(szuloElem){
-        this.szuloElem.innerHTML= szuloElem + " következik"
+        this.szuloElem.innerHTML= szuloElem
     }
     
 }
