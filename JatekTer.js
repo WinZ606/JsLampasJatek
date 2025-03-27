@@ -21,7 +21,5 @@ export default class JatekTer {
       this.#lista[event.detail] = !this.#lista[event.detail];
       this.#megjelenit();
     });
-  }
-
-  ellenoriz() {}
+  }     
 }
