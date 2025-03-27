@@ -67,7 +67,7 @@ body {
   }
   
   /* Egyes mezők */
-  .elem {
+  .el{
     width: 33.33%;
     height: 33.33%;
     border: 1px solid #e0e0e0;
@@ -80,5 +80,12 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
+  }
+
+  .elem {
     background-color: #f9bc4c;
+  }
+
+  .elemValt{
+    background-color: green;
   }
