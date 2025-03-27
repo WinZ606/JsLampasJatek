@@ -1,2 +1,2 @@
 #Light On UML: 
-![image](files://C:\javascript\lampauml/LampasJatekUML.png
+![image](files://C:/javascript/lampauml/LampasJatekUML.png
