@@ -6,7 +6,8 @@ export default class Lampa{
       this.#lampaIndex = index;
       this.szuloElem = szuloElem;
       this.megjelenit();
-      this.lampaElem = document.querySelector(".elem:last-child")
+      console.log(this.#allapot)
+      this.lampaElem = document.querySelector(".el:last-child")
       this.lampaElem.addEventListener("click", ()=> {
         const esemeny = new CustomEvent("kivalaszt", {detail: this.#lampaIndex})
         window.dispatchEvent(esemeny)
@@ -14,9 +15,14 @@ export default class Lampa{
     }
   
     megjelenit() {
-      let html = `<div class="elem">
-
+      let html;
+      if (this.#allapot === false) {
+        html = `<div class="el elem">
                   </div>`;
+      } else {
+        html = `<div class="el elemValt">
+                    </div>`;
+      }
       // HTML DOM okjektumot készít
       this.szuloElem.insertAdjacentHTML("beforeend", html);
     }
