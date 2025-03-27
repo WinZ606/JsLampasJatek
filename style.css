@@ -72,6 +72,7 @@ body {
     height: 33.33%;
     border: 1px solid #e0e0e0;
     box-sizing: border-box;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,39 +80,5 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
-    background-color: #0080ff;
-  }
-  
-  .elem:hover {
-    background-color: #f1f3f5;
-  }
-  
-  /* X és O szimbólumok színezése */
-  .elem[data-jatekos="X"] {
-    color: #2196f3;
-  }
-  
-  .elem[data-jatekos="O"] {
-    color: #f44336;
-  }
-  
-  /* Reszponzív design kisebb képernyőkre */
-  @media (max-width: 480px) {
-    main {
-      width: 95%;
-      padding: 1rem;
-    }
-    
-    header h1 {
-      font-size: 2rem;
-    }
-    
-    .jatekter {
-      width: 260px;
-      height: 260px;
-    }
-    
-    .elem {
-      font-size: 2.5rem;
-    }
+    background-color: #f9bc4c;
   }
