@@ -2,7 +2,7 @@ import Info from "./Info.js";
 import Lampa from "./Lampa.js";
 
 export default class JatekTer {
-  #lista = [false, true, true, false, true, false, false, true, false];
+  #lista = [false, false, false, false, false, false, false, false, false];
 
     constructor(szuloElem, infoElem){
         this.szuloElem = szuloElem;
@@ -21,9 +21,25 @@ export default class JatekTer {
 
     #esemenykezelo() {
         window.addEventListener("kivalaszt", (event) => {
-            this.#lista[event.detail] = !this.#lista[event.detail];
-            this.#megjelenit();
-            this.infoMegjelenit();
+          let index = event.detail;
+          let sor = Math.floor(index / 3);
+          let oszlop = index % 3;
+
+          this.#lista[index] = !this.#lista[index];
+          if (sor > 0) {
+            this.#lista[index - 3] = !this.#lista[index - 3];
+          }
+          if (sor < 2) {
+            this.#lista[index + 3] = !this.#lista[index + 3];
+          }
+          if (oszlop > 0) {
+            this.#lista[index - 1] = !this.#lista[index - 1];
+          }
+          if (oszlop < 2) {
+            this.#lista[index + 1] = !this.#lista[index + 1];
+          }
+          this.#megjelenit();
+          this.infoMegjelenit();
         });
     }
 
@@ -36,10 +52,12 @@ export default class JatekTer {
             }
         }
         new Info(this.infoElem, db) 
+        this.ellenoriz(db)
     }
 
-    ellenoriz(){
-        
+    ellenoriz(db){
+        if (db === this.#lista.length){
+            alert("Nyertél!")
+        }
     }
-
 }
