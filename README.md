@@ -1,2 +1,2 @@
 LightOn UML: 
-![UML](/lampauml/LampasJatekUML2.png "UML")
+![UML](LampasJatekUML2.png "UML")
