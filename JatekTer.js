@@ -17,7 +17,7 @@ export default class JatekTer{
 
     #esemenykezelo() {
         window.addEventListener("kivalaszt", (event) => {
-          console.log(event.detail);
+            
         });
     }
 
