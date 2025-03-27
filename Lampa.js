@@ -22,7 +22,6 @@ export default class Lampa{
         html = `<div class="el elemValt">
                     </div>`;
       }
-      // HTML DOM okjektumot készít
       this.szuloElem.insertAdjacentHTML("beforeend", html);
     }
   }
